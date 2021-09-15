@@ -7,10 +7,21 @@ namespace Program2
         static void Main(string[] args)
         {
 
+            Book newBook = new Book("Stunnin ", "Curtis ", 10);
+            
+
+            Book secondBook = new Book("Not Stunnin","Not Curtis",20);
+
+            //Redundant code
+            //secondBook.title = "Not Stunnin'";
+            //secondBook.author = "Not Curtis";
+            //secondBook.pages = 20;
+
+
             Console.WriteLine("Hello World!");
             Console.WriteLine("");
 
-            
+
 
             int[] number = { 4, 5, 6 };
 
@@ -50,7 +61,7 @@ namespace Program2
 
                 Console.WriteLine("You are a tall male");
             }
-            else if(isMale && !isTall)
+            else if (isMale && !isTall)
             {
                 Console.WriteLine("Sorry you are not tall, have to be 6ft");
             }
@@ -60,32 +71,32 @@ namespace Program2
             }
 
 
-                int number1 = 0;
-                
-                int number2 = 0;
-                int result = 0;
-            
+            int number1 = 0;
+
+            int number2 = 0;
+            int result = 0;
+
             //Console.WriteLine("Enter a function: ");
 
             string function = Console.ReadLine();
-            
-            for(int i = 0; i < function.Length; i++)
+
+            for (int i = 0; i < function.Length; i++)
             {
                 char c = function[i];
-                
+
 
                 if (Char.IsDigit(c))
                 {
 
                     number1 = Convert.ToInt32(c);
 
-                    
+
                 }
                 if (Char.IsDigit(function[i]))
                 {
                     number2 = Convert.ToInt32(c);
                 }
-                
+
                 string op = Convert.ToString(function[i]);
 
                 switch (op)
@@ -99,7 +110,7 @@ namespace Program2
                         break;
                 }
 
-              
+
             }
 
             //Console.WriteLine(Convert.ToInt32(result));
@@ -107,7 +118,7 @@ namespace Program2
 
             int index = 1;
 
-            while(index <= 3)
+            while (index <= 3)
             {
                 Console.WriteLine(index);
                 index++;
@@ -115,21 +126,42 @@ namespace Program2
             }
 
             //do this before checking condition
-            
+
             //while ();
 
 
 
             //2d array. comma inside []
-            
+            //, 2d   ,, 3d  ,,, 4d
             int[,] numberGrid = {
                 { 1, 2},
                 { 3, 4},
                 { 5, 6}
 
             };
+            //row, column
+            Console.WriteLine(numberGrid[1, 1]);
 
-            Console.WriteLine(numberGrid[0, 0]);
+
+            //how many rows and columns we want. 
+            int[,] test = new int[2, 3];
+
+
+
+            //handle exception
+            try
+            {
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                //always going to be executed no matter what
+
+            }
 
 
         }
@@ -148,18 +180,21 @@ namespace Program2
             x += y;
 
             return x;
-            
-            
+
+
         }
 
 
-        
+
         static int Cubed(int num)
         {
             int result = num * num * num;
-                // cant do Math.Pow(num, 3);
+            // cant do Math.Pow(num, 3);
             return result;
         }
+
+
+
 
 
 
