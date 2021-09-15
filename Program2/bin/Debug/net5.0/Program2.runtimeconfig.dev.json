@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/epheras/.dotnet/store/|arch|/|tfm|",
+      "/Users/epheras/.nuget/packages"
+    ]
+  }
+}
